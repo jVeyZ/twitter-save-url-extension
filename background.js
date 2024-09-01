@@ -1,3 +1,6 @@
+//Background.js is obsolete in this version, it was used in a previous version to donwload the links 
+//from the internal storage in the browser
+
 chrome.runtime.onInstalled.addListener(() => {
     console.log('Extension installed and background script initialized.');
 });
