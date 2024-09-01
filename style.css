@@ -1,0 +1,15 @@
+.save-url-btn {
+    margin-left: 10px;
+        padding: 5px;
+        width: 20px;
+        height: 20px;
+        background-color: #ec5252;
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        border: solid 1px white;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 3px;
+
+}

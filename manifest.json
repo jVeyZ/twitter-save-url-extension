@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Twitter Save URL",
+  "version": "1.0",
+  "description": "Adds a button to Twitter posts to save the post URL to a file.",
+  "permissions": ["activeTab", "scripting", "downloads", "storage"],
+  "host_permissions": [
+    "https://twitter.com/*",
+    "https://x.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://twitter.com/*",
+        "https://x.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Twitter Save URL"
+  }
+}
