@@ -49,12 +49,12 @@ function addSaveButton(tweet) {
                 const filename = sanitizeFilename(tweetContent.substring(0, 50)); // Limit filename length
 
                 // Combine tweet URL and image URLs into one string
-                let contentToSave = `Tweet URL: ${tweetUrl}\n`;
+                let contentToSave = `${tweetUrl}\n`;
                 if (imageUrls.length > 0) {
-                    contentToSave += `Image URLs:\n${imageUrls.join('\n')}`;
-                } else {
-                    contentToSave += `No images found.`;
-                }
+                    contentToSave += `${imageUrls.join('\n')}`;
+                } //else {
+                    //contentToSave += `No images found.`;
+                //}
 
                 // Create a Blob with the content
                 const blob = new Blob([contentToSave], { type: 'text/plain' });
@@ -82,7 +82,7 @@ function observeTweets() {
     console.log("observeTweets function triggered!");
     
     function setupObserver() {
-        const timeline = document.querySelector('div[aria-label="Timeline: Your Home Timeline"]');
+        const timeline = document.querySelector('div[aria-label="Timeline: Your Home Timeline"], div[aria-label="Timeline: Walla’s liked posts"]');
         if (!timeline) {
             console.log("Timeline container not found, retrying...");
             setTimeout(setupObserver, 1000);
